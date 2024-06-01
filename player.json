@@ -1,0 +1,91 @@
+{
+    "BombGuy": {
+
+        "attributes": {
+
+            "width": 58,
+            "height": 58,
+            "position": {"x": 0, "y": 800},
+            "frameSpeed": 6,
+            "scale": 2
+        },
+        "sprites": {
+
+            "idle_dir_right": {
+
+                "image": "Bomb_Guy-Idle.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Idle.png",
+                "frameTotalCount": 8
+            },
+            "run_dir_right": {
+
+                "image": "Bomb_Guy-Run.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Run.png",
+                "frameTotalCount": 8
+            },
+            "jump_dir_right": {
+
+                "image": "Bomb_Guy-Idle.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Jump.png",
+                "frameTotalCount": 7
+            },
+            "fall_dir_right": {
+
+                "image": "Bomb_Guy-Fall.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Fall.png",
+                "frameTotalCount": 5
+            },
+            "takingHit_dir_right": {
+
+                "image": "Bomb_Guy-Hit.png",
+                "imageSrc":"./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Hit.png",
+                "frameTotalCount": 8
+            },
+            "death_dir_right": {
+
+                "image": "Bomb_Guy-Dead.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-right/Bomb_Guy-Death.png",
+                "frameTotalCount": 10
+            },
+
+            "idle_dir_left": {
+
+                "image": "Bomb_Guy-Idle_left.png",
+                "imageSrc":"./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Idle_left.png",
+                "frameTotalCount": 8
+            },
+            "run_dir_left": {
+
+                "image": "Bomb_Guy-Run_left.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Run_left.png",
+                "frameTotalCount": 8
+            },
+            "jump_dir_left": {
+
+                "image": "Bomb_Guy-Jump_left.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Run_left.png",
+                "frameTotalCount": 7
+            },
+            "fall_dir_left": {
+
+                "image": "Bomb_Guy-Fall_left.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Fall_left.png",
+                "frameTotalCount": 5
+            },
+            "takingHit_dir_left": {
+
+                "image": "Bomb_Guy-Hit_left.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Hit_left.png",
+                "frameTotalCount": 8
+            },
+            "death_dir_left": {
+
+                "image": "Bomb_Guy-Death.png",
+                "imageSrc": "./assets/Pirate Bomb/Bomb-Guy/Sprite-left/Bomb_Guy-Death_left.png",
+                "frameTotalCount": 10
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "maps/Map-test.tmx",
+    "expandedProjectPaths": [
+        "maps",
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "#16x16": {
+            "scaleInEditor": 1
+        },
+        "#64x64": {
+            "scaleInDock": 1
+        },
+        "#test": {
+            "scaleInDock": 1
+        },
+        "maps/Map-01.tsx": {
+            "scaleInDock": 0.8,
+            "scaleInEditor": 1
+        },
+        "maps/Map-02.tsx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 551,
+                "y": 551.5
+            }
+        },
+        "maps/Map-02.tsx#64x64": {
+            "scaleInDock": 1
+        },
+        "maps/Map-03.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 528,
+                "y": 355.33333333333326
+            }
+        },
+        "maps/Map-03.tmx#64x64": {
+            "scaleInDock": 1
+        },
+        "maps/Map-test.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 526,
+                "y": 518.5
+            }
+        },
+        "maps/Map-test.tmx#64x64": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "C:/Users/hieut/webdev/Pirate-Bomb-Web/assets/Pirate Bomb/Sprites/8-Tile-Sets",
+    "map.height": 12,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 64,
+    "map.tileWidth": 64,
+    "map.width": 20,
+    "openFiles": [
+        "maps/Map-01.tsx",
+        "maps/Map-test.tmx"
+    ],
+    "project": "Pirate-Bomb.tiled-project",
+    "recentFiles": [
+        "maps/Map-01.tsx",
+        "maps/Map-test.tmx",
+        "maps/Map-03.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 64,
+        "width": 64
+    }
+}
