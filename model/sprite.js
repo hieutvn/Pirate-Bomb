@@ -1,17 +1,19 @@
 import { canvas, ctx } from "./res.js";
 
+export { Sprite };
+
 
 
 class Sprite {
 
     constructor({imageSrc, position, frameSpeed, frameTotalCount, scale}) {
 
-        this.image = new Image();
-        this.image.src = imageSrc;
-        this.position = position;
-        this.frameSpeed = frameSpeed,
-        this.frameTotalCount = frameTotalCount;
-        this.scale = scale;
+        this.image              = new Image();
+        this.image.src          = imageSrc;
+        this.position           = position;
+        this.frameSpeed         = frameSpeed,
+        this.frameTotalCount    = frameTotalCount;
+        this.scale              = scale;
 
         this.image.onload = () => {
 
@@ -22,8 +24,8 @@ class Sprite {
         this.image.onerror = (error) => { console.error('Failed to load image.', error); }
 
 
-        this.frameCurrent = 0;
-        this.frameElapsed = 0;
+        this.frameCurrent       = 0;
+        this.frameElapsed       = 0;
     }
 
 
@@ -72,8 +74,3 @@ class Sprite {
         }
     }
 }
-
-
-
-
-export { Sprite };

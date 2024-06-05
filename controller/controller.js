@@ -9,7 +9,7 @@ export { Controller };
 
 class Controller {
 
-    constructor() {
+    constructor(attributes) {
 
         this.keyState = {
 
@@ -22,13 +22,15 @@ class Controller {
 
         this.playerState = {
 
-            idle : undefined,
-            running : undefined,
-            ducking : undefined,
-            jumping : undefined,
-            throwing : undefined,
-            colliding : undefined
+            idle        : false,
+            running     : false,
+            ducking     : false,
+            jumping     : false,
+            throwing    : false,
+            colliding   : false
         }
+
+        this.attributes = attributes;
 
         this.keyEvents();
     }
@@ -56,26 +58,48 @@ class Controller {
 
     updateMovement(key) {
 
-        switch (key) {
+        if (!this.attributes) {
+
+            console.error("Not loaded yet.");
+        }
+
+        switch(key) {
 
             case 'd': 
 
-                
+                if (this.keyState.d) {
+
+                    console.log("d pressed");
+                    this.attributes.position.x += 5;
+
+                }
+            break;
+
+            case 'a':
+
+                if (this.keyState.a) {
+
+                    console.log("a pressed");
+                }
+            break;
+
+            case 's':
+
+                if (this.keyState.s) {
+
+                    console.log("s pressed");
+                }
+            break;
+
+            case 'w':
+
+                if (this.keyState.w) {
+
+                    console.log('w');
+                }
             break;
         }
     }
 
     
-}
-
-
-class Playable extends Player {
-
-
-    constructor() {
-
-        super();
-
-
-    }
 }

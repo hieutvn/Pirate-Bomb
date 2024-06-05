@@ -14,6 +14,10 @@ class InteractiveObject {
             this.gravity_pull       = 1.5;
             
             this.ground            = canvasHeight;
+
+            // CONTROLLER
+            this.controller         = null;
+
         }
     
         objectGravity() {
@@ -42,5 +46,13 @@ class InteractiveObject {
         objectOverlapping(obj_1, obj_2) {
     
     
+        }
+
+        createController() {
+
+            if (this.object_position.x !== 0 && this.object_position.y !== 0) {
+    
+                this.controller = new Controller(this.attributes);
+            } 
         }
 }

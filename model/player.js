@@ -9,10 +9,13 @@
 import { InteractiveObject } from './interactiveobject.js';
 import { Sprite } from './sprite.js';
 import { DataStorage } from '../data/datastorage.js';
+import { Controller } from '../controller/controller.js';
+
+export { Player };
 
 class Player extends InteractiveObject {
 
-    constructor(/*sprite*/) {
+    constructor() {
 
         super();
         
@@ -28,12 +31,18 @@ class Player extends InteractiveObject {
             spriteCollection    : { undefined }
         };
 
-        this.sprite = null;
-        this.loadingState = true;
+        this.sprite             = null;
+        this.loadingState       = true;
+        
+        // OBJECTS
+        this.controller         = new Controller(this.attributes)
+
+        // FUNCTIONS
+        this.storeSprite();
+        this.dataStorage        = new DataStorage("BombGuySprites");
 
 
-        // Functions
-       this.storeSprite();
+
     }
 
     async createSprite() {
@@ -60,19 +69,23 @@ class Player extends InteractiveObject {
             this.attributes.spriteCollection    = data.BombGuy.sprites;
             
             
+
+            /*
             Object.entries(data).forEach(([key, value]) => {
 
                 console.log(key, value.sprites);
                 console.log(key, value.attributes);
             });
+            */
 
-
-
+            // ASSIGN VALUES TO CONTROLLER
+            //this.controller             = new Controller(this.attributes)
 
             // ASSIGN TO object_dim in interactiveobject.js
             this.object_dim.width       = this.attributes.width;
             this.object_dim.height      = this.attributes.height;
             this.object_position        = this.attributes.position;
+
 
             return new Sprite(
                                 {
@@ -93,7 +106,19 @@ class Player extends InteractiveObject {
         try {
 
             this.sprite = await this.createSprite();
+
             this.loadingState = false;
+
+            if (this.sprite) {
+
+                this.dataStorage.addObjectToStorage(this.sprite);
+                console.log("Sprite is collected")
+            }
+            else {
+
+                console.log("fff")
+            } 
+                       
         }
         catch (error) {
 
@@ -102,6 +127,13 @@ class Player extends InteractiveObject {
 
         }
 
+    }
+
+    async getSpriteData() {
+
+        // RETURNS EVERY SPRITE DATA
+
+        
     }
 
 
@@ -127,27 +159,7 @@ class Player extends InteractiveObject {
 
             console.error('Sprite not loaded yet.')
         }
-
     }
-
-    async updateMovement(key) {
-
-
-        switch (key) {
-
-            case 'd': 
-
-                this.attributes.position.x += Math.floor(5);
-            break;
-        }
-    }
-
-
-
-
-
-
-
 }
 
 
@@ -155,4 +167,3 @@ class Player extends InteractiveObject {
 
 
 
-export { Player };

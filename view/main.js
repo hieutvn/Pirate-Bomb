@@ -11,12 +11,20 @@ import { Sprite } from '../model/sprite.js';
 import { Engine } from '../model/engine.js';
 import { World } from '../model/world.js';
 import { Controller } from '../controller/controller.js';
+import { Map } from '../model/map.js';
+import { DataStorage } from "../data/datastorage.js";
 
+const player            = new Player();
+const engine            = new Engine();
+const world             = new World();
+const controller        = new Controller();
+const map               = new Map({ 
+                                    rows: 5, 
+                                    columns: 10, 
+                                    tileSize: { width: 10, height: 10}
+                                    });
 
-const player = new Player();
-const engine = new Engine();
-const world = new World();
-const controller = new Controller();
+const database          = new DataStorage();                                    
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -36,5 +44,6 @@ function animate() {
     
 }
 
+//console.log(map.createMap())
 
-console.log(controller.keyState.hasOwnProperty('z'));
+
