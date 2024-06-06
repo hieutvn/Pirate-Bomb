@@ -26,7 +26,7 @@ class DataStorage {
         
                 this.database = event.target.result;
                 
-                this.objectStore = this.database.createObjectStore('sprites', { keyPath: 'id', autoIncreament: true });
+                this.objectStore = this.database.createObjectStore('sprites', { keyPath: 'id', autoIncrement: true });
                 
                 this.objectStore.createIndex('action', 'action', { unique: false });
                 this.objectStore.createIndex('image', 'image', { unique: false });

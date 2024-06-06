@@ -40,6 +40,7 @@ class Player extends InteractiveObject {
         // FUNCTIONS
         this.storeSprite();
         this.dataStorage        = new DataStorage("BombGuySprites");
+        this.storage            = null;
 
 
 
@@ -101,23 +102,26 @@ class Player extends InteractiveObject {
     catch (error) { console.error('Sprite creation failed.', error); }
     }
 
+
     async storeSprite() {
 
         try {
 
-            this.sprite = await this.createSprite();
-
+            this.sprite         = await this.createSprite();
+            this.storage        = this.dataStorage.createStorage();
+    
             this.loadingState = false;
 
             if (this.sprite) {
 
-                this.dataStorage.addObjectToStorage(this.sprite);
                 console.log("Sprite is collected")
             }
             else {
 
                 console.log("fff")
             } 
+            
+
                        
         }
         catch (error) {
